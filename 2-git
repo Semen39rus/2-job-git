@@ -1,0 +1,108 @@
+ User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ mkdir temp
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ mkdir log
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ cd log
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD/log (main)
+$ touch main.html
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD/log (main)
+$ touch some.tmp
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD/log (master)
+$ cd C:/Users/User/20ISP3/TSD
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ touch .gitignore
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git add temp
+The following paths are ignored by one of your .gitignore files:
+20ISP3/TSD/temp
+hint: Use -f if you really want to add them.
+hint: Turn this message off by running
+hint: "git config advice.addIgnoredFile false"
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git add log
+error: '20ISP3/TSD/log/' does not have a commit checked out
+fatal: adding files failed
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git add .gitignore
+warning: LF will be replaced by CRLF in 20ISP3/TSD/.gitignore.
+The file will have its original line endings in your working directory
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git status
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ echo temp,.tmp>.gitignore
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ cat .gitignore
+temp,.tmp
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git commit -m "Ignore files"
+[main 845d1ae] Ignore files
+ 1 file changed, 1 insertion(+)
+ create mode 100644 20ISP3/TSD/.gitignore
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git log
+commit 845d1ae66d6730f87d89694de6dd4677649dc301 (HEAD -> main)
+Author: Semyon <semacvolko@gmail.com>
+Date:   Fri Mar 11 11:48:22 2022 +0200
+
+    Ignore files
+
+commit 23f67ddf1884764a19bcfccec4eeea3cc1f14172
+Author: Semyon <semacvolko@gmail.com>
+Date:   Fri Mar 11 11:11:24 2022 +0200
+
+    two commit
+
+commit 8a8030ca559b9fe9cd99305adc9bc839493d0925
+Author: Semyon <semacvolko@gmail.com>
+Date:   Fri Mar 11 11:08:47 2022 +0200
+
+    One commit
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git add my_first_file.txt
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git status
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        modified:   my_first_file.txt
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git add my_first_file.txt
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git status
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        modified:   my_first_file.txt
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git diff
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git add my_first_file.txt
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git status
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        deleted:    my_first_file.txt
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git add  my_second_file.txt
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git status
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        deleted:    my_first_file.txt
+        deleted:    my_second_file.txt
+
